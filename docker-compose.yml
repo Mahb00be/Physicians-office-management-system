@@ -1,0 +1,18 @@
+--- 
+services: 
+  authentication: 
+    build: "."
+    image: sajadkh/doctor_system_authentication
+    ports: 
+      - "8000:8000"
+  doctor: 
+    build: "."
+    image: sajadkh/doctor_system_doctor_panel
+    ports: 
+      - "8001:8001"
+  patient: 
+    build: "."
+    image: sajadkh/doctor_system_patient_panel
+    ports: 
+      - "8002:8002"
+version: "3.9"
